@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HW7A</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<h2>HW7A</h2>
+
+<p>Display the volume from a calculated length, width, and height from within a "for" loop for i=0-9.</p>
+
+<script>
+/*
+ * Cleveland Codes - HW7
+ *
+ * This script will display the volume to the user using document.write();
+ *
+ */
+ function startProcess (){	
+	for (var i=0; i<=9; i++){
+		length = i + 2;
+		width  = i + 3;
+		height = i + 4;
+		var volume = getVolume(length,width,height);
+		if (volume < 60) {
+			document.writeln("Volume is below 60");
+		}
+		else
+		if (volume >= 60 && volume <= 70) {
+			document.writeln("Small Volume: " + volume);
+		}
+		else
+		if (volume >= 71 && volume <= 80) {
+			document.writeln("Medium Volume: " + volume);
+		}
+		else
+		if (volume >= 81 && volume <= 90) {
+			document.writeln("Large Volume: " + volume);
+		}
+		else
+		if (volume >= 91 && volume <= 100) {
+			document.writeln("Extra Large Volume: " + volume);
+		}
+		else 
+			document.writeln("Volume is above 100");
+	}
+ }
+ 
+ function getVolume(length,width,height) {
+	var volume = length * width * height;
+	return volume;
+}
+startProcess();
+ </script>
+ 
+ </body>
+ </html>
